@@ -84,7 +84,7 @@
       <h3>영상 편집 준비물</h3>
       <ul class="list tight small" style="margin:0">
         <li>직접 출연해 찍은 세로(9:16) 영상 클립</li>
-        <li>세무 릴스 주제 10개·후킹 멘트 정리본</li>
+        <li>레퍼런스 영상 — 링크 또는 세무사님 기존 영상 파일</li>
         <li>자막에 쓸 세법 사실 정보(지어내지 않게)</li>
         <li>저작권 없는 배경음악 파일(mp3)</li>
         <li>노트북 여유 저장공간</li>
@@ -101,6 +101,79 @@
   </div>
   <p class="mt small sub">Claude Pro 외에 스톡 영상·음악 사이트(Artlist·Epidemic Sound 등)의 유료 구독이 있으면 더 다양한 재료를 쓸 수 있지만, 없어도 무료 소스로 충분히 진행돼요.</p>
 <div class="foot"><span>AI with Paul</span><span>5</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="오프닝" data-title="HTML · CSS · JS">
+  <p class="path">기초 한 장 · 눌러 보세요</p>
+  <h1>웹페이지는 세 가지로 만들어져요</h1>
+  <div class="layers mt" data-lv="1">
+    <div class="layer-steps">
+      <button class="layer-step" type="button" data-lv="1"><span class="num">1</span><span class="txt"><b>HTML · 뼈대</b><span>무엇이 있는지 정해요. 집의 골조예요.</span></span></button>
+      <button class="layer-step" type="button" data-lv="2"><span class="num">2</span><span class="txt"><b>CSS · 옷</b><span>어떻게 보일지 정해요. 인테리어예요.</span></span></button>
+      <button class="layer-step" type="button" data-lv="3"><span class="num">3</span><span class="txt"><b>JavaScript · 움직임</b><span>누르면 무슨 일이 생길지 정해요. 전기와 수도예요.</span></span></button>
+    </div>
+    <div class="browser">
+      <div class="browser-bar"><i></i><i></i><i></i><span>taxcpa.com</span></div>
+      <div class="demo-page">
+        <nav class="demo-nav"><b>OO세무법인</b><span><a>소개</a> <a>전자책</a> <a>상담</a></span></nav>
+        <h2 class="demo-title">세금, 모르면 더 냅니다</h2>
+        <p class="demo-sub">증여·상속·절세가 궁금한 분들을 위한 전자책·VOD</p>
+        <button class="demo-btn" type="button">상담 신청하기</button>
+        <p class="demo-hint" aria-live="polite"></p>
+      </div>
+      <div class="browser-code">
+        <span class="lbl"></span>
+        <pre data-lv="1">&lt;nav&gt;OO세무법인 &lt;a&gt;전자책&lt;/a&gt; …&lt;/nav&gt;
+&lt;h2&gt;세금, 모르면 더 냅니다&lt;/h2&gt;
+&lt;button&gt;상담 신청하기&lt;/button&gt;</pre>
+        <pre data-lv="2" hidden>h2 { font-size: 52px; }
+button { background: black; color: white;
+         border-radius: 999px; }</pre>
+        <pre data-lv="3" hidden>button.onclick = () =&gt; {
+  button.textContent = "신청 완료 ✓";
+}</pre>
+      </div>
+    </div>
+  </div>
+  <p class="mt-l" style="font-size:36px"><mark>코드는 Claude가 써요. "버튼 색(CSS)만 바꿔줘"처럼 말할 줄만 알면 돼요.</mark></p>
+<div class="foot"><span>AI with Paul</span><span>6</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="오프닝" data-title="Next.js는 뭐가 다를까">
+  <p class="path">기초 한 장 · 메뉴를 눌러 보세요</p>
+  <h1>오늘은 Next.js로 만들어요</h1>
+  <div class="nav-demo mt">
+    <div>
+      <p class="nd-label">일반 HTML 사이트</p>
+      <div class="browser nd" data-kind="plain">
+        <div class="browser-bar"><i></i><i></i><i></i><span class="nd-url">taxcpa.com</span></div>
+        <div class="nd-load"></div>
+        <div class="nd-site">
+          <div class="nd-head nd-part"><b>OO세무법인</b><span class="nd-nav"><button class="nd-link on" type="button" data-pg="home">홈</button><button class="nd-link" type="button" data-pg="class">전자책</button><button class="nd-link" type="button" data-pg="price">상담</button></span></div>
+          <div class="nd-main nd-part"><b class="nd-t">세금, 모르면 더 냅니다</b><span class="nd-d">증여·상속·절세 전자책·VOD</span></div>
+          <div class="nd-foot nd-part">서울 · 카카오톡 상담</div>
+        </div>
+      </div>
+      <p class="nd-status" aria-live="polite">메뉴를 눌러 보세요</p>
+    </div>
+    <div>
+      <p class="nd-label">Next.js</p>
+      <div class="browser nd" data-kind="next">
+        <div class="browser-bar"><i></i><i></i><i></i><span class="nd-url">taxcpa.com</span></div>
+        <div class="nd-load"></div>
+        <div class="nd-site">
+          <div class="nd-head nd-part"><b>OO세무법인</b><span class="nd-nav"><button class="nd-link on" type="button" data-pg="home">홈</button><button class="nd-link" type="button" data-pg="class">전자책</button><button class="nd-link" type="button" data-pg="price">상담</button></span></div>
+          <div class="nd-main nd-part"><b class="nd-t">세금, 모르면 더 냅니다</b><span class="nd-d">증여·상속·절세 전자책·VOD</span></div>
+          <div class="nd-foot nd-part">서울 · 카카오톡 상담</div>
+        </div>
+      </div>
+      <p class="nd-status" aria-live="polite">메뉴를 눌러 보세요</p>
+    </div>
+  </div>
+  <div class="cols c3 mt">
+    <div class="card nd-card"><h3>부품으로 다시 써요</h3><p class="tiny sub">메뉴·하단을 한 번 만들고 모든 페이지에서 같이 써요.</p></div>
+    <div class="card nd-card"><h3>검색에 유리해요</h3><p class="tiny sub">서버에서 미리 그려서 보내 검색엔진이 잘 읽어요.</p></div>
+    <div class="card nd-card"><h3>기능을 붙이기 쉬워요</h3><p class="tiny sub">상담·구매 연결 같은 기능(API)을 안에 둘 수 있어요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>7</span></div></section></div>
 
 <!-- ===================== 블록 1 홈페이지 ===================== -->
 
@@ -124,7 +197,7 @@
       </ul>
     </div>
   </div>
-<div class="foot"><span>AI with Paul</span><span>6</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>8</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="1-1 레퍼런스 분석하기">
   <p class="path">홈페이지 · 1-1 분석 · 프롬프트</p>
@@ -133,7 +206,7 @@
 첫 화면 문구, 섹션 순서, 색·글꼴, 상담·구매 버튼 위치를 표로 정리하고
 내 사이트에 가져올 점도 적어서 레퍼런스_분석표.md로 저장해줘.</pre></div>
   <p class="prompt-note">[ ] 자리에 주소를 한 줄씩 붙여 넣어요. 사이트가 안 열린다고 하면, 화면을 캡처해서 폴더에 넣고 "캡처를 보고 분석해줘"라고 해요.</p>
-<div class="foot"><span>AI with Paul</span><span>7</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>9</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="체크포인트 분석">
   <p class="path">홈페이지 · 체크포인트</p>
@@ -143,7 +216,7 @@
     <li><span class="box">✓</span><div><b>섹션 순서</b><span>위에서 아래로 어떤 내용이 나오는지 정리돼 있어요.</span></div></li>
     <li><span class="box">✓</span><div><b>가져올 점</b><span>사이트마다 1~2개씩 내 사이트에 쓸 점이 있어요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>8</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>10</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="grill-me란">
   <p class="path">홈페이지 · 기획</p>
@@ -161,7 +234,7 @@
   <div class="card tint mt"><h3>답하는 요령</h3>
     <p class="small" style="margin:0">모르면 <b>"추천해줘"</b> · 예시로 답하기 <b>"A 사이트처럼"</b> · 숫자로 답하기 <b>"한 달 상담 10건"</b> · 그만하려면 <b>"이제 정리해줘"</b></p>
   </div>
-<div class="foot"><span>AI with Paul</span><span>9</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>11</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="2-1 인터뷰 받기">
   <p class="path">홈페이지 · 2-1 인터뷰 · 프롬프트</p>
@@ -171,7 +244,7 @@
 홈페이지에서 결제를 직접 받지는 않아.
 한 번에 하나씩 질문하고, 내가 답하면 다음 질문을 해줘. 모르는 건 추천안도 같이 줘.</pre></div>
   <p class="prompt-note">질문이 10~15개쯤 나와요. 15분 정도 편하게 대답해요. 정답은 없어요.</p>
-<div class="foot"><span>AI with Paul</span><span>10</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>12</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="2-2 기획안 정리">
   <p class="path">홈페이지 · 2-2 기획안 · 프롬프트</p>
@@ -193,7 +266,7 @@
       <h5>전환</h5><p style="margin:0">전자책 구매하기(스마트스토어) · 상담 신청(카카오톡)</p>
     </div>
   </div>
-<div class="foot"><span>AI with Paul</span><span>11</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>13</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="체크포인트 기획">
   <p class="path">홈페이지 · 체크포인트</p>
@@ -203,7 +276,7 @@
     <li><span class="box">✓</span><div><b>첫 화면 문구</b><span>3초 안에 무슨 곳인지 알 수 있는 한 줄이에요.</span></div></li>
     <li><span class="box">✓</span><div><b>구매·상담 버튼</b><span>전자책 구매와 상담 신청 경로가 각각 정해졌어요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>12</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>14</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="3-1 시안 2개 받기">
   <p class="path">홈페이지 · 3-1 시안 · 프롬프트</p>
@@ -212,7 +285,7 @@
 방향은 서로 다르게 하고, /a /b 주소에서 나란히 비교할 수 있게 해줘.
 Node.js가 없으면 설치부터 도와줘.</pre></div>
   <p class="prompt-note">시간이 빠듯해서 2개로 줄였어요. 만드는 데 10분쯤 걸려요. 다 되면 Claude 앱 오른쪽 미리보기에서 바로 열어 봐요.</p>
-<div class="foot"><span>AI with Paul</span><span>13</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>15</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="시안 고르고 다듬기">
   <p class="path">홈페이지 · 고르기</p>
@@ -223,7 +296,21 @@ Node.js가 없으면 설치부터 도와줘.</pre></div>
     <div class="say"><span class="small no">❌ 좀 더 신뢰감 있게</span><span class="small faint">→</span><span class="small"><b>✅ 레퍼런스 2번처럼 여백을 넓히고 글자 수를 줄여줘</b></span></div>
   </div>
   <p class="mt sub">마음에 드는 게 없으면 "이번엔 ○○ 방향으로 시안 2개 더"라고 해요.</p>
-<div class="foot"><span>AI with Paul</span><span>14</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>16</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="캡처해서 구체적으로 수정 요청하기">
+  <p class="path">홈페이지 · 수정 요청법</p>
+  <h1>화면을 캡처하고, 어디를 어떻게 바꿀지 구체적으로 말해요</h1>
+  <ol class="steps compact mt">
+    <li>고치고 싶은 화면을 <b>캡처</b>해요(맥 Cmd+Shift+4, 윈도우 Win+Shift+S).</li>
+    <li>캡처 이미지를 Claude 대화창에 <b>끌어다 놓아요</b>.</li>
+    <li>"이 화면에서 <b>이 버튼</b>을 <b>이렇게</b> 바꿔줘"처럼 위치와 방향을 같이 말해요.</li>
+  </ol>
+  <div class="card mt" style="padding-top:14px;padding-bottom:6px"><h3 style="margin:0 0 8px">이렇게 말하면 바로 고쳐요</h3>
+    <div class="say"><span class="small no">❌ 여기 이상해</span><span class="small faint">→</span><span class="small"><b>✅ (캡처 첨부) 빨간 박스 친 이 버튼이 너무 작아, 2배로 키워줘</b></span></div>
+    <div class="say"><span class="small no">❌ 전체적으로 다시</span><span class="small faint">→</span><span class="small"><b>✅ (캡처 첨부) 이 화면의 제목과 사진 위치만 바꿔줘</b></span></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>17</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="3-2 골라서 완성하기">
   <p class="path">홈페이지 · 3-2 완성 · 프롬프트</p>
@@ -233,7 +320,7 @@ Node.js가 없으면 설치부터 도와줘.</pre></div>
 전자책·VOD "구매하기" 버튼은 [스마트스토어 상품 주소]로 연결해주고,
 "상담 신청" 버튼은 [카카오톡 채널 주소]로 연결해줘.</pre></div>
   <p class="prompt-note">사진이 없으면 "임시 사진으로 채워줘"라고 해요. 스마트스토어·카카오톡 주소는 미리 복사해 두세요.</p>
-<div class="foot"><span>AI with Paul</span><span>15</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>18</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="체크포인트 개발">
   <p class="path">홈페이지 · 체크포인트</p>
@@ -244,7 +331,7 @@ Node.js가 없으면 설치부터 도와줘.</pre></div>
     <li><span class="box">✓</span><div><b>구매·상담 버튼</b><span>누르면 실제로 스마트스토어·카카오톡으로 가요.</span></div></li>
     <li><span class="box">✓</span><div><b>사실</b><span>전자책·VOD 소개, 가격 문구에 오타가 없어요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>16</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>19</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="GitHub와 Cloudflare">
   <p class="path">홈페이지 · 배포</p>
@@ -259,7 +346,7 @@ Node.js가 없으면 설치부터 도와줘.</pre></div>
     <div class="node"><b>내 주소</b>누구나 접속</div>
   </div>
   <p class="mt" style="font-size:36px"><mark>한 번 연결해 두면 GitHub에 올릴 때마다 사이트가 저절로 바뀌어요.</mark></p>
-<div class="foot"><span>AI with Paul</span><span>17</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>20</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="4-1 GitHub에 올리기">
   <p class="path">홈페이지 · 4-1 GitHub · 프롬프트</p>
@@ -268,7 +355,7 @@ Node.js가 없으면 설치부터 도와줘.</pre></div>
 Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하면 방법을 알려줘.
 공개·비공개는 먼저 물어봐줘.</pre></div>
   <p class="prompt-note">비공개를 추천해요. 브라우저에 로그인 창이 뜨면 직접 로그인하고, 비밀번호는 Claude에게 알려주지 마세요.</p>
-<div class="foot"><span>AI with Paul</span><span>18</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>21</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="4-2 Cloudflare 연결">
   <p class="path">홈페이지 · 4-2 Cloudflare</p>
@@ -281,7 +368,7 @@ Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하�
     <li>나온 <b>주소</b>를 눌러 내 사이트를 열어요</li>
   </ol>
   <p class="mt sub">화면이 다르게 보이면 캡처해서 Claude에게 "어디를 눌러야 해?"라고 물어봐요.</p>
-<div class="foot"><span>AI with Paul</span><span>19</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>22</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="체크포인트 배포">
   <p class="path">홈페이지 · 체크포인트</p>
@@ -291,7 +378,7 @@ Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하�
     <li><span class="box">✓</span><div><b>구매 버튼 확인</b><span>눌러서 실제로 스마트스토어 상품으로 가는지 확인해요.</span></div></li>
     <li><span class="box">✓</span><div><b>자동 반영</b><span>문구 하나를 고쳐 GitHub에 올리고, 사이트가 바뀌는지 봐요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>20</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>23</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="SEO와 GEO">
   <p class="path">홈페이지 · 검색·AI 노출</p>
@@ -311,7 +398,7 @@ Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하�
     </div>
   </div>
   <p class="mt-l" style="font-size:34px"><mark>둘 다 검색엔진과 AI가 내 사이트를 읽고 이해하게 해 주는 일이에요.</mark></p>
-<div class="foot"><span>AI with Paul</span><span>21</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>24</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="SEO+GEO 적용하기">
   <p class="path">홈페이지 · 검색·AI 노출 · 프롬프트</p>
@@ -329,7 +416,7 @@ Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하�
 페이지별 제목(30자)과 설명(80자)을 넣어줘. 다른 디자인은 바꾸지 마.
 AI 검색에도 잘 나오게 전문 분야·상담 방법과 FAQ도 정리해줘. [받은 코드 두 줄]</pre></div>
   <p class="prompt-note">확인은 내 사이트에서 Ctrl+U (맥 Cmd+Option+U). 검색에 나오기까지 1~4주 걸려요.</p>
-<div class="foot"><span>AI with Paul</span><span>22</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>25</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="1" data-section="홈페이지" data-title="체크포인트 SEO·GEO">
   <p class="path">홈페이지 · 체크포인트</p>
@@ -339,55 +426,125 @@ AI 검색에도 잘 나오게 전문 분야·상담 방법과 FAQ도 정리해�
     <li><span class="box">✓</span><div><b>사이트맵 제출</b><span>sitemap.xml 주소를 각 서치콘솔에 제출했어요.</span></div></li>
     <li><span class="box">✓</span><div><b>FAQ 반영</b><span>전문 분야와 자주 묻는 질문이 페이지에 글자로 들어가 있어요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>23</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>26</span></div></section></div>
 
 <!-- ===================== 블록 2 영상 ===================== -->
 
 <div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="레퍼런스가 중요한 이유">
   <p class="path">영상 · 레퍼런스</p>
-  <h1>잘 된 세무 릴스를 레퍼런스로</h1>
+  <h1>잘 된 영상 하나가 편집 양식이 돼요</h1>
   <p class="lead">레퍼런스 없이 "릴스 만들어줘"만 하면 AI는 무난한 영상을 만들어요.</p>
   <div class="cols c2 mt">
-    <div class="card"><h3>레퍼런스 없이</h3><p class="small sub">첫 장면이 느리고, 자막이 두루뭉술해요.</p></div>
-    <div class="card tint p2"><h3 class="ac">잘 된 세무 릴스를 보고</h3><p class="small sub">첫 1~2초 훅, 짧은 자막, 상담 전환까지 흐름이 분명해요.</p></div>
+    <div class="card"><h3>레퍼런스는 둘 중 하나로</h3><ul class="list tight small" style="margin:0"><li><b>링크</b>로 — 다른 사람의 잘 된 세무 릴스 주소</li><li><b>첨부파일</b>로 — 세무사님이 예전에 만드신 영상</li></ul></div>
+    <div class="card tint p2"><h3 class="ac">오늘 할 일</h3><p class="small sub" style="margin:0">이 레퍼런스의 편집 양식(컷 길이·자막 위치·훅 방식)을 뽑아서, 오늘 올릴 영상 편집에 그대로 적용해요.</p></div>
   </div>
-  <p class="mt small sub">보내주신 유튜브 채널의 반응 좋은 영상 2~3개를 레퍼런스로 써요.</p>
-<div class="foot"><span>AI with Paul</span><span>24</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>27</span></div></section></div>
 
-<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="2-1 주제·훅 정하고 스토리보드 받기">
-  <p class="path">영상 · 2-1 스토리보드 · 프롬프트</p>
-  <h1>준비해 두신 주제 10개 중 하나로 시작해요</h1>
-  <div class="prompt mt"><div class="prompt-head"><span>2-1 스토리보드 만들기</span><button class="copy" type="button" aria-label="2-1 스토리보드 만들기 프롬프트 복사">복사</button></div><pre>세무_릴스_주제.md 에서 오늘 다룰 주제 하나를 골랐어.
-[고른 주제와 첫 3초 후킹 멘트]
-이 주제로 20초 안팎 세로 영상 스토리보드를 짜줘.
-· 첫 1~2초: 후킹 멘트를 화면에 큰 글자로
-· 그다음: 문제 제기 → 핵심 설명 → 사례 → 상담 유도
-· 장면마다 자막 한 줄, 실제 세법 내용만(지어내지 않기)
-아직 영상은 만들지 마. 표로 먼저 보여줘.</pre></div>
-  <p class="prompt-note">아직 영상은 만들지 마는 꼭 넣어요. 스토리보드를 글로 고친 뒤 한 번에 만들어요.</p>
-<div class="foot"><span>AI with Paul</span><span>25</span></div></section></div>
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="2-1 레퍼런스 분석하기">
+  <p class="path">영상 · 2-1 레퍼런스 분석 · 프롬프트</p>
+  <h1>레퍼런스의 편집 양식을 뽑아요</h1>
+  <div class="prompt mt"><div class="prompt-head"><span>2-1 레퍼런스 분석하기</span><button class="copy" type="button" aria-label="2-1 레퍼런스 분석하기 프롬프트 복사">복사</button></div><pre>이 영상을 레퍼런스로 분석해줘. [레퍼런스 영상 링크 또는 첨부파일]
+길이, 컷 길이, 첫 1~2초 훅 방식, 자막 위치·크기·색, 장면 순서를
+표로 정리해서 레퍼런스_양식.md로 저장해줘.</pre></div>
+  <p class="prompt-note">링크가 안 열리면 영상을 다운받아 첨부파일로 올려줘도 돼요. 세무사님이 예전에 만드신 영상을 레퍼런스로 써도 좋아요.</p>
+<div class="foot"><span>AI with Paul</span><span>28</span></div></section></div>
 
-<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="2-2 영상 만들기">
-  <p class="path">영상 · 2-2 만들기 · 프롬프트</p>
-  <h1>계획대로 컷과 자막까지 한 번에</h1>
-  <div class="prompt sm mt"><div class="prompt-head"><span>2-2 계획대로 영상 만들기</span><button class="copy" type="button" aria-label="2-2 계획대로 영상 만들기 프롬프트 복사">복사</button></div><pre>확정한 스토리보드대로 영상을 만들어서 결과물.mp4로 저장해줘.
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="2-2 나만의 영상 편집기 사이트 만들기">
+  <p class="path">영상 · 2-2 편집기 사이트 · 프롬프트</p>
+  <h1>레퍼런스 양식대로 자동 편집하는 화면을 만들어요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>2-2 나만의 영상 편집기 만들기</span><button class="copy" type="button" aria-label="2-2 나만의 영상 편집기 만들기 프롬프트 복사">복사</button></div><pre>레퍼런스_양식.md를 바탕으로 "나만의 영상 편집기" 웹 화면을 만들어줘.
 ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
-· 1080×1920, 세로. 첫 1~2초는 후킹 멘트를 화면 위쪽에 크게.
-· 나머지 장면은 자막 한 줄을 아래쪽 1/3에 큼직하게, 흰 글자에 검은 테두리.
-· 촬영해 둔 영상 클립을 이 폴더에 넣어뒀어. 그 클립으로 이어 붙여줘.
-다 되면 길이를 알려주고, 장면 하나씩 뽑아 보여줘.</pre></div>
-  <p class="prompt-note">소리를 켜고 끝까지 봐요. 고칠 곳은 "자막 크기를 레퍼런스처럼"처럼 구체적으로 말해요.</p>
-<div class="foot"><span>AI with Paul</span><span>26</span></div></section></div>
+· 화면: 영상을 끌어다 놓는 칸 + [스토리보드 받기] 버튼
+· 영상을 넣고 누르면, 레퍼런스_양식.md의 컷 길이·훅 방식대로
+  장면 목록(시작·끝·자막)을 스토리보드로 보여줘
+· 스토리보드에서 자막을 고치거나 장면을 빼고 [확정하고 만들기]를 누르면
+  레퍼런스 양식 그대로 컷·자막·음악까지 입힌 영상이 만들어지게 해줘
+· 다 되면 미리보기 자리에서 재생 + [내려받기] 버튼까지
+먼저 화면만 만들고, 내 영상 하나로 테스트해봐.</pre></div>
+  <p class="prompt-note">만드는 데 10분 안팎 걸려요. 디자인은 "버튼을 더 크게"처럼 말로 바꿔요.</p>
+<div class="foot"><span>AI with Paul</span><span>29</span></div></section></div>
 
-<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="체크포인트 영상">
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="2-3 써보기">
+  <p class="path">영상 · 2-3 써보기</p>
+  <h1>영상 넣고, 스토리보드 보고, 확정해요</h1>
+  <ol class="steps mt">
+    <li>오늘 올릴 영상을 화면 칸에 <b>끌어다 놓아요</b>.</li>
+    <li><b>[스토리보드 받기]</b> → 레퍼런스 양식대로 장면 목록이 나와요.</li>
+    <li>자막을 내 말로 고치고, 마음에 안 드는 장면은 빼요.</li>
+    <li>마음에 들면 <b>[확정하고 만들기]</b> → 재생해서 확인해요.</li>
+  </ol>
+  <p class="mt-l sub">막히면 Code 탭에 어디서 멈췄는지, 화면에 뭐가 보였는지 캡처와 같이 알려주세요.</p>
+<div class="foot"><span>AI with Paul</span><span>30</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="체크포인트 편집기">
   <p class="path">영상 · 체크포인트</p>
   <h1>올리기 전에 확인해요</h1>
   <ul class="checks compact mt" data-id="cp-video">
-    <li><span class="box">✓</span><div><b>첫 1~2초</b><span>후킹 멘트가 바로 보여요.</span></div></li>
+    <li><span class="box">✓</span><div><b>레퍼런스 양식</b><span>컷 길이·자막 위치가 레퍼런스와 비슷해요.</span></div></li>
     <li><span class="box">✓</span><div><b>자막</b><span>오타가 없고, 실제 세법 내용과 같아요.</span></div></li>
     <li><span class="box">✓</span><div><b>상담 유도</b><span>마지막에 상담·홈페이지로 연결되는 안내가 있어요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>27</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>31</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="API와 출입증">
+  <p class="path">영상 · 유튜브 자동 업로드</p>
+  <h1>API는 프로그램용 문, 업로드엔 출입증이 필요해요</h1>
+  <div class="cols c2 mt" style="align-items:stretch">
+    <div class="card"><h3>직접 올리기</h3><ul class="list"><li>스튜디오를 열고 파일을 골라요</li><li>제목·설명을 매번 붙여 넣어요</li><li>영상이 많아지면 손이 많이 가요</li></ul></div>
+    <div class="card tint p2"><h3 class="ac">API로 올리기</h3><ul class="list"><li>유튜브의 정식 통로로 바로 보내요</li><li>편집기 화면의 버튼 하나로 올라가요</li><li>처음 한 번 <b>내가 직접 허락(OAuth 출입증)</b>해요</li></ul></div>
+  </div>
+  <p class="mt-l"><mark>오늘 올리는 영상은 '비공개'로 올라가요.</mark></p>
+  <p class="sub">구글 심사를 받지 않은 프로그램으로 올린 영상은 비공개로 고정돼요. 채널에 올라가는 것까지가 오늘 목표예요.</p>
+<div class="foot"><span>AI with Paul</span><span>32</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="3-1 구글 클라우드 프로젝트와 동의 화면">
+  <p class="path">영상 · 3-1 구글 클라우드 준비</p>
+  <h1>프로젝트·API·동의 화면을 만들어요</h1>
+  <ol class="steps mt">
+    <li><a href="https://console.cloud.google.com/" target="_blank" rel="noopener"><code>console.cloud.google.com</code></a> → 약관 동의(<b>결제 정보는 넣지 않아요</b>) → <b>새 프로젝트</b> <code>taxcpa-upload</code>.</li>
+    <li>검색창에 <b>YouTube Data API v3</b> → 들어가서 <b>사용</b>.</li>
+    <li><b>API 및 서비스 → OAuth 동의 화면 → 시작하기</b>: 앱 이름 <code>세무릴스 업로더</code>, 이메일은 내 이메일, 대상 <b>외부</b> → 동의 체크 → <b>만들기</b>.</li>
+    <li>왼쪽 <b>대상 → 테스트 사용자 → Add users</b>에 <b>유튜브 채널이 있는 내 이메일</b>을 넣어요.</li>
+  </ol>
+  <p class="mt"><mark>4번을 빼먹는 게 가장 흔한 실수예요.</mark> 빠지면 로그인할 때 '액세스 차단됨'이 떠요.</p>
+<div class="foot"><span>AI with Paul</span><span>33</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="3-2 출입증 파일 받기">
+  <p class="path">영상 · 3-2 출입증 파일</p>
+  <h1>출입증 파일을 받아 폴더에 넣어요</h1>
+  <ol class="steps mt">
+    <li>왼쪽 <b>클라이언트</b> → <b>클라이언트 만들기</b>.</li>
+    <li>애플리케이션 유형은 <b>데스크톱 앱</b>, 이름은 그대로 두고 <b>만들기</b>.</li>
+    <li>뜬 창에서 <b>JSON 다운로드</b>를 눌러요. <b>이 창을 닫으면 다시 못 받아요</b>.</li>
+    <li>받은 파일 이름을 <code>client_secret.json</code>으로 바꿔 세무사홈페이지 폴더에 넣어요.</li>
+  </ol>
+  <div class="card mt" style="border-color:var(--c-2)">
+    <p class="small" style="margin:0"><b>이 파일은 비밀번호처럼 다뤄요.</b> 남에게 보내거나 인터넷에 올리지 않아요.</p>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>34</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="3-3 업로드 연결하기">
+  <p class="path">영상 · 3-3 업로드 연결 · 프롬프트</p>
+  <h1>편집기 화면에 유튜브 업로드 버튼을 붙여요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>3-3 유튜브 자동 업로드 연결하기</span><button class="copy" type="button" aria-label="3-3 유튜브 자동 업로드 연결하기 프롬프트 복사">복사</button></div><pre>client_secret.json 으로 유튜브 자동 업로드를 연결해줘.
+· 나만의 영상 편집기 화면에서 영상이 만들어지면 그 아래에
+  제목·설명 칸과 [유튜브에 올리기] 버튼을 추가해줘.
+· 처음 실행할 때 브라우저로 구글 로그인을 띄우고, 출입증은 token.json에 저장해서
+  다음부터는 로그인 없이. 권한은 업로드에 필요한 것만.
+· 공개 범위는 비공개 고정, 올리는 동안 진행 표시, 끝나면 영상 주소.
+다 되면 방금 만든 영상을 비공개로 한 번 올려서 로그인을 끝내봐.</pre></div>
+  <p class="prompt-note">처음 올릴 때 브라우저에 구글 로그인 창이 떠요. 계정 선택 → 테스트 사용자로 넣은 계정 → '안전하지 않음' 경고가 떠도 계속 진행하면 돼요.</p>
+<div class="foot"><span>AI with Paul</span><span>35</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="영상 편집" data-title="체크포인트 유튜브 업로드">
+  <p class="path">영상 · 체크포인트</p>
+  <h1>여기까지 됐나요</h1>
+  <ul class="checks compact mt" data-id="cp-upload">
+    <li><span class="box">✓</span><div><b>편집기</b><span>영상을 넣으면 레퍼런스 양식대로 스토리보드가 나오고, 확정하면 영상이 만들어져요.</span></div></li>
+    <li><span class="box">✓</span><div><b>출입증</b><span>구글 로그인을 한 번 마쳐서 token.json이 생겼어요.</span></div></li>
+    <li><span class="box">✓</span><div><b>업로드</b><span>[유튜브에 올리기] 버튼으로 비공개 영상이 채널에 올라갔어요.</span></div></li>
+  </ul>
+<div class="foot"><span>AI with Paul</span><span>36</span></div></section></div>
 
 <!-- ===================== 블록 3 메타 광고 ===================== -->
 
@@ -404,7 +561,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <div class="node"><b>광고</b>오늘 만든 이미지·영상·문구</div>
   </div>
   <p class="mt small sub">계정이 이미 있어서 캠페인부터 바로 시작해요.</p>
-<div class="foot"><span>AI with Paul</span><span>28</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>37</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="3" data-section="메타 광고" data-title="3-1 캠페인 만들기">
   <p class="path">메타 광고 · 3-1 캠페인</p>
@@ -415,7 +572,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <li>캠페인 이름을 알아보기 쉽게 적어요(예: 전자책_11월)</li>
   </ol>
   <p class="mt sub">처음에는 트래픽으로 시작해서 데이터가 쌓이면 전환으로 바꾸는 것도 방법이에요.</p>
-<div class="foot"><span>AI with Paul</span><span>29</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>38</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="3" data-section="메타 광고" data-title="3-2 타겟·예산 설정">
   <p class="path">메타 광고 · 3-2 타겟·예산</p>
@@ -425,7 +582,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <div class="card tint p3"><h3 class="ac">예산</h3><p class="small sub" style="margin:0">일일 예산으로 작게 시작해요. 하루 1~2만원으로 시작해서 반응을 보고 늘려요.</p></div>
   </div>
   <p class="mt small sub">광고세트 단계에서 설정해요. 캠페인 목표가 전환이면 전환 위치(웹사이트)도 함께 지정해요.</p>
-<div class="foot"><span>AI with Paul</span><span>30</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>39</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="3" data-section="메타 광고" data-title="3-3 오늘 만든 자료로 소재 올리기">
   <p class="path">메타 광고 · 3-3 소재 · 프롬프트</p>
@@ -437,7 +594,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <li>위에서 뽑은 문구 중 하나를 붙여넣기</li>
     <li>웹사이트 URL은 오늘 만든 홈페이지 주소로</li>
   </ol>
-<div class="foot"><span>AI with Paul</span><span>31</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>40</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="3" data-section="메타 광고" data-title="체크포인트 메타광고">
   <p class="path">메타 광고 · 체크포인트</p>
@@ -447,7 +604,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <li><span class="box">✓</span><div><b>소재</b><span>오늘 만든 영상·문구가 들어갔어요.</span></div></li>
     <li><span class="box">✓</span><div><b>연결 주소</b><span>광고를 누르면 오늘 만든 홈페이지로 가요.</span></div></li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>32</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>41</span></div></section></div>
 
 <!-- ===================== 마무리 ===================== -->
 
@@ -459,7 +616,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <li><b>영상</b> — 세무 릴스 한 편 완성</li>
     <li><b>메타 광고</b> — 캠페인·타겟·예산·소재까지 세팅</li>
   </ul>
-<div class="foot"><span>AI with Paul</span><span>33</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>42</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="" data-section="마무리" data-title="과제로 이어가기">
   <p class="path">과제로 이어가기</p>
@@ -469,7 +626,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
     <div class="card"><h3>광고 A/B 테스트</h3><p class="small sub">문구·이미지를 두 가지로 나눠 돌려보고 반응 좋은 쪽으로 좁히는 법</p></div>
     <div class="card"><h3>전자책 콘텐츠 확장</h3><p class="small sub">준비해 두신 100권 분량의 나머지 주제를 같은 방식으로 늘려가는 법</p></div>
   </div>
-<div class="foot"><span>AI with Paul</span><span>34</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>43</span></div></section></div>
 
 <div class="frame"><section class="slide" data-p="" data-section="마무리" data-title="질문과 마무리">
   <p class="path">Q&amp;A</p>
@@ -481,7 +638,7 @@ ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
   </div>
   <div class="mt-l"><a class="dl" href="prompts.html" target="_blank" rel="noopener">오늘 프롬프트 모음<small>새 창</small></a></div>
   <p class="mt sub">오늘 수고 많으셨어요. 감사합니다.</p>
-<div class="foot"><span>AI with Paul</span><span>35</span></div></section></div>
+<div class="foot"><span>AI with Paul</span><span>44</span></div></section></div>
 
 </main>
 <button class="edge l" id="edge-l" aria-label="이전 슬라이드"></button>

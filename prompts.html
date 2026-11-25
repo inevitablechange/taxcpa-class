@@ -34,6 +34,8 @@ Node.js가 없으면 설치부터 도와줘.</pre></div></div>
 전자책·VOD "구매하기" 버튼은 [스마트스토어 상품 주소]로 연결해주고,
 "상담 신청" 버튼은 [카카오톡 채널 주소]로 연결해줘.</pre></div></div>
 
+  <div class="item"><h3>캡처해서 구체적으로 수정 요청하기</h3><p class="small sub">화면을 캡처(맥 Cmd+Shift+4, 윈도우 Win+Shift+S)해서 대화창에 끌어다 놓고, "이 화면에서 이 버튼을 이렇게 바꿔줘"처럼 위치와 방향을 같이 말해요.</p></div>
+
   <div class="item"><h3>4-1 GitHub에 올리기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>이 홈페이지를 내 GitHub에 새 저장소로 올려줘.
 Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하면 방법을 알려줘.
 공개·비공개는 먼저 물어봐줘.</pre></div></div>
@@ -43,20 +45,27 @@ Cloudflare에 배포할 수 있게 설정도 해주고, 로그인이 필요하�
 AI 검색에도 잘 나오게 전문 분야·상담 방법과 FAQ도 정리해줘. [받은 코드 두 줄]</pre></div></div>
 
   <h2>영상 편집</h2>
-  <div class="item"><h3>2-1 스토리보드 만들기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>세무_릴스_주제.md 에서 오늘 다룰 주제 하나를 골랐어.
-[고른 주제와 첫 3초 후킹 멘트]
-이 주제로 20초 안팎 세로 영상 스토리보드를 짜줘.
-· 첫 1~2초: 후킹 멘트를 화면에 큰 글자로
-· 그다음: 문제 제기 → 핵심 설명 → 사례 → 상담 유도
-· 장면마다 자막 한 줄, 실제 세법 내용만(지어내지 않기)
-아직 영상은 만들지 마. 표로 먼저 보여줘.</pre></div></div>
+  <div class="item"><h3>2-1 레퍼런스 분석하기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>이 영상을 레퍼런스로 분석해줘. [레퍼런스 영상 링크 또는 첨부파일]
+길이, 컷 길이, 첫 1~2초 훅 방식, 자막 위치·크기·색, 장면 순서를
+표로 정리해서 레퍼런스_양식.md로 저장해줘.</pre></div></div>
 
-  <div class="item"><h3>2-2 계획대로 영상 만들기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>확정한 스토리보드대로 영상을 만들어서 결과물.mp4로 저장해줘.
+  <div class="item"><h3>2-2 나만의 영상 편집기 만들기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>레퍼런스_양식.md를 바탕으로 "나만의 영상 편집기" 웹 화면을 만들어줘.
 ffmpeg가 없으면 먼저 설치를 도와줘(관리자 비밀번호 없이).
-· 1080×1920, 세로. 첫 1~2초는 후킹 멘트를 화면 위쪽에 크게.
-· 나머지 장면은 자막 한 줄을 아래쪽 1/3에 큼직하게, 흰 글자에 검은 테두리.
-· 촬영해 둔 영상 클립을 이 폴더에 넣어뒀어. 그 클립으로 이어 붙여줘.
-다 되면 길이를 알려주고, 장면 하나씩 뽑아 보여줘.</pre></div></div>
+· 화면: 영상을 끌어다 놓는 칸 + [스토리보드 받기] 버튼
+· 영상을 넣고 누르면, 레퍼런스_양식.md의 컷 길이·훅 방식대로
+  장면 목록(시작·끝·자막)을 스토리보드로 보여줘
+· 스토리보드에서 자막을 고치거나 장면을 빼고 [확정하고 만들기]를 누르면
+  레퍼런스 양식 그대로 컷·자막·음악까지 입힌 영상이 만들어지게 해줘
+· 다 되면 미리보기 자리에서 재생 + [내려받기] 버튼까지
+먼저 화면만 만들고, 내 영상 하나로 테스트해봐.</pre></div></div>
+
+  <div class="item"><h3>3-3 유튜브 자동 업로드 연결하기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>client_secret.json 으로 유튜브 자동 업로드를 연결해줘.
+· 나만의 영상 편집기 화면에서 영상이 만들어지면 그 아래에
+  제목·설명 칸과 [유튜브에 올리기] 버튼을 추가해줘.
+· 처음 실행할 때 브라우저로 구글 로그인을 띄우고, 출입증은 token.json에 저장해서
+  다음부터는 로그인 없이. 권한은 업로드에 필요한 것만.
+· 공개 범위는 비공개 고정, 올리는 동안 진행 표시, 끝나면 영상 주소.
+다 되면 방금 만든 영상을 비공개로 한 번 올려서 로그인을 끝내봐.</pre></div></div>
 
   <h2>메타 광고</h2>
   <div class="item"><h3>3-3 광고 문구 뽑기</h3><div class="prompt"><div class="prompt-head"><span>프롬프트</span><button class="copy">복사</button></div><pre>오늘 만든 홈페이지 기획안.md와 영상 스토리보드를 보고,
